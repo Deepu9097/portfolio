@@ -294,6 +294,12 @@ nav ul li a:hover {
 
   }
 
+  header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 25px;
+}
   #menu-icon:hover #menu-dropdown {
     display: flex;
     flex-direction: column;
