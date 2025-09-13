@@ -290,8 +290,9 @@ nav ul li a:hover {
   }
 
   #menu-dropdown {
-    /* display: flex; */
-
+    /* display: flex;
+    flex-direction: column;
+    text-decoration: none; */
   }
 
   header {

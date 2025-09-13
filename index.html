@@ -154,15 +154,13 @@
   <!--contact section-->
 
   <div class="contact">
-    <h1 class="contact-title"  style="color: #087fad;padding: 20px;"><u>Contact</u></h1>
+    <h1 id="contact-title"  style="color: #087fad;padding: 20px;"><u>Contact</u></h1>
     <div class="contact-item">
-      <input type="text" placeholder="Name" class="input">
-      <input type="email" name="Email" placeholder="Email" class="input">
-      <textarea type="text" name="discussing" placeholder="discription" class="input-dis">
-        </textarea>
+     <input type="text" name="Name" placeholder="Name" class="input">
+<input type="email" name="Email" placeholder="Email" class="input">
+<textarea name="discussing" placeholder="Description" class="input-dis"></textarea>
 
-      <input type="button" value="Sumbit" class="input-button">
-
+<input type="button" onclick="contactDetails()" value="Submit" class="input-button">
     </div>
 
   </div>
@@ -210,7 +208,28 @@
 
   <!-- Brand icons (Font Awesome) -->
 
+<script>
+  
+function contactDetails() {
+  if (!document.querySelector('.input[name="Name"]').value || !document.querySelector('.input[name="Email"]').value || !document.querySelector('.input-dis').value) {
+    alert("Please fill in all fields.");
+    return;
+  }
+  let name = document.querySelector('.input[name="Name"]').value;
+  let email = document.querySelector('.input[name="Email"]').value;
+  let description = document.querySelector('.input-dis').value;
 
+  console.log("Name: " + name);
+  console.log("Email: " + email);
+  console.log("Description: " + description);
+  alert("Thank you your response has been recorded.");
+  // Clear the input fields after submission
+  document.querySelector('.input[name="Name"]').value = '';
+  document.querySelector('.input[name="Email"]').value = '';
+  document.querySelector('.input-dis').value = '';
+}
+
+</script>
 
 </body>
 
